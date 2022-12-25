@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block body %}
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap w-full mb-20">
+      <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Bugdet Packages of Popular Places
+        </h1>
+        <div class="h-1 w-20 bg-pink-500 rounded"></div>
+      </div>
+      <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">In these Packages, You can visit to popular destination
+        in North Pakistan. These are pre-planed Packages in which you can not customized date, places, vehicle and
+        Itinerary.</p>
+    </div>
+    <p><b>Customized or Private Trips,</b>Want to arrange your own private trip click on customized</p>
+    <br>
+    <a href="/customized"><button
+        class="inline-flex text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg font-semibold"
+        id="booknow">Customized</button></a>
+        <br><br><hr><br>
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900  text-center">Tour Packages
+        </h1> <br>
+    <div class="flex flex-wrap -m-4">
+      {% for package in package %} 
+      <div class="xl:w-1/4 md:w-1/2 p-4">
+        <a href="/pdetail/{{package.name}}">
+          <div class="bg-gray-100 p-6 rounded-lg">
+            {% set fname = 'images/' + package.image %}
+            <img class="h-40 rounded w-full object-cover object-center mb-6" src="{{ url_for('static', filename=fname) }}"
+              alt="content">
+            <h3 class="tracking-widest text-pink-500 text-xs font-medium title-font">{{package.days}}</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{{package.name}}</h2>
+            <p class="leading-relaxed text-base">{{package.content[0:143]}}....</p>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  </div>
+</section>
+{% endblock %}

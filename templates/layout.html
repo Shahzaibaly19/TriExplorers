@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>TriExplorers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/chatbutton/floating-wpp.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/logo.png') }}">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" class="w-24 h-28 p-2">
+                <span class="ml-3 text-xl mb-6">TriExplorers</span>
+            </a>
+            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+                <ul class="flex ml-0">
+                    <a href="/home" class="mr-5 hover:text-blue-600">
+                        <li>Home</li>
+                    </a>
+                    <a href="/blog" class="mr-5 hover:text-blue-600">
+                        <li>Blog</li>
+                    </a>
+                    <a href="/packages" class="mr-5 hover:text-blue-600">
+                        <li>Packages</li>
+                    </a>
+                    <a href="/contact" class="mr-5 hover:text-blue-600">
+                        <li>Contact</li>
+                    </a>
+                    <a href="/about" class="mr-5 hover:text-blue-600">
+                        <li>About</li>
+                    </a>
+                </ul>
+            </nav>
+            <a href="/packages"><button
+                    class="inline-flex items-center bg-blue-600 border-0 py-1 px-3 focus:outline-none hover:bg-blue-700 text-white rounded text-base mt-4 md:mt-0">Book
+                    Now
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </button></a>
+        </div>
+    </header>
+    <div id="chatbutton-wa" data-phone="+923498113517" data-showpopup="true" data-headertitle="TriExplorers"
+        data-popupmessage=" Hi, How Can We Help You?👋
+
+If You Need any Help or Support Feel Free To Contact..
+
+Packages and Customized Booking
+
+You can also Contact here For Booking and Other Customer Support." data-placeholder="Type here" data-position="left"
+        data-headercolor="#39847a" data-backgroundcolor="#e5ddd5" data-autoopentimeout="5" data-size="65px">
+        <div class="floating-wpp-button" style="width: 65px; height: 65px;">
+            <div class="floating-wpp-button-image">
+
+                <img src="{{ url_for('static', filename='images/whatsapp-logo-4.png') }}" alt="">
+
+            </div>
+        </div>
+    </div>
+    {% block body %} {% endblock %}
+
+    <hr>
+    <footer class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap md:text-left text-center order-first">
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Nav Links</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a href="/home" class="text-gray-600 hover:text-blue-600 cursor-pointer">Home</a>
+                        </li>
+                        <li>
+                            <a href="/blog" class="text-gray-600 hover:text-blue-600 cursor-pointer">Blog</a>
+                        </li>
+                        <li>
+                            <a href="/about" class="text-gray-600 hover:text-blue-600 cursor-pointer">About Us</a>
+                        </li>
+                        <li>
+                            <a href="/contact" class="text-gray-600 hover:text-blue-600 cursor-pointer">Contact Us</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Booking</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a href="/customized" class="text-gray-600 hover:text-blue-600 cursor-pointer">Private
+                                Trips</a>
+                        </li>
+                        <li>
+                            <a href="/packages" class="text-gray-600 hover:text-blue-600 cursor-pointer">Packages</a>
+                        </li>
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=923498113517" target="_blank" class="text-gray-600 hover:text-blue-600 cursor-pointer">Booking on Whatsapp</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/triexplorers/" target="_blank" class="text-gray-600 hover:text-blue-600 cursor-pointer">Booking on Instagram</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Others</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=923498113517" class="text-gray-600 hover:text-blue-600 cursor-pointer">Work with us Contact</a>
+                        </li>
+                        <li>
+                            <a href="/legal_info" class="text-gray-600 hover:text-blue-600 cursor-pointer">Legal Information</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">SUBSCRIBE OUR YOUTUBE</h2>
+                    <div
+                        class="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
+                        
+                        <a href="https://youtube.com/@triexplorers" target="_blank"><button
+                            class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded">Subscribe</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-100">
+            <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+                <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}"
+                        class="w-18 h-24 text-white p-2 rounded-full mt-4" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                    <span class="ml-3 text-xl">TriExplorers</span>
+                </a>
+                <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2023 TriExplorers —
+                    <a href="" rel="noopener noreferrer" class="text-gray-600 ml-1"
+                        target="_blank">@triexplorers</a>
+                </p>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                    <a href="https://www.facebook.com/triexplorers001" target="_blank" class="text-gray-500 hover:cursor-pointer hover:text-blue-600 ">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a href="" target="_blank" class="ml-3 text-gray-500 hover:cursor-pointer hover:text-blue-600 ">
+                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-5 h-5" viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/triexplorers/" target="_blank" class="ml-3 text-gray-500 hover:cursor-pointer hover:text-blue-600 ">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                    <a href="" target="_blank" class="ml-3 text-gray-500 hover:cursor-pointer hover:text-blue-600 ">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path stroke="none"
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                            </path>
+                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                        </svg>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='assets/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/chatbutton/floating-wpp.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/chatbutton/script.js') }}"></script>
+</body>
+
+</html>

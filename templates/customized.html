@@ -1,0 +1,140 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<section class="text-gray-600 body-font relative">
+    <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Private and Customized Trips</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Here you can arrange private and customized tours and
+                trips for your family, School, Office Staff, Friends or University friends trips, and much more. All you
+                need to fill in these blanks with your information and idea about the trip, and we will arrange it for
+                you according to your details.</p>
+        </div>
+        <div class="lg:w-1/2 md:w-2/3 mx-auto">
+            <form action="/customized" method="post" novalidate class="flex flex-wrap -m-2">
+                <div class="p-2 w-1/2">
+                    <div class="relative">
+                        <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+                        <input type="text" id="name" name="name" required="required"
+                            class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-pink-500 focus:bg-white focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                </div>
+                <div class="p-2 w-1/2">
+                    <div class="relative">
+                        <label for="phone" class="leading-7 text-sm text-gray-600">WhatsApp/Mobile Number</label>
+                        <input type="tel" id="phone" name="phone" required="required"
+                            class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-pink-500 focus:bg-white focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                </div>
+                <div class="p-2 w-1/2">
+                    <div class="relative">
+                        <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                        <input type="email" id="email" name="email" required="required"
+                            class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-pink-500 focus:bg-white focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                </div>
+                <div class="p-2 w-1/2">
+                    <div class="relative">
+                        <label for="residence" class="leading-7 text-sm text-gray-600">Your City of Residence</label>
+                        <input type="text" id="residence" name="residence" required="required"
+                            class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-pink-500 focus:bg-white focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                </div>
+                <div class="p-2 w-1/2">
+                    <div class="relative">
+                        <label for="city" class="leading-7 text-sm text-gray-600">Where you want to go (you can write multiples) </label>
+                        <input type="text" id="city" name="city" required="required"
+                            class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-pink-500 focus:bg-white focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                </div>
+                <div class="p-2 w-1/2">
+                    <div class="relative">
+                        <label for="date" class="leading-7 text-sm text-gray-600">When do you want to go</label>
+                        <input type="date" id="date" name="date" required="required"
+                            class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-pink-500 focus:bg-white focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                </div>
+                <div class="p-2 w-1/2">
+                <div class="relative">
+                <label for="cars" class="leading-7 text-sm text-gray-600" >Which Type of Tour:</label>
+                <select name="type" id="type" required="required" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-pink-500 focus:bg-white focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" >
+                    <option value="family tour">Family Tour</option>
+                    <option value="honeymoon">HoneyMoon</option>
+                    <option value="college trips">College Trips</option>
+                    <option value="friends group tour">Friends Group Tour</option>
+                    <option value=" Corporate Tours "> Corporate Tours </option>
+                    <option value=" Other Tours "> Other Tours </option>
+                </select>
+                </div>
+                </div>
+                <div class="p-2 w-1/2">
+                    <div class="relative">
+                        <label for="adult" class="leading-7 text-sm text-gray-600">Adults (14-99years)</label>
+                        <input type="number" id="adult" name="adult" required="required"
+                            class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-pink-500 focus:bg-white focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                </div>
+                <div class="p-2 w-1/2">
+                    <div class="relative">
+                        <label for="child" class="leading-7 text-sm text-gray-600">Children (3-13years) if doesn't have set it to "0"</label>
+                        <input type="number" id="child" name="child" required="required"
+                            class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-pink-500 focus:bg-white focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                </div>
+                <div class="p-2 w-1/2">
+                    <div class="relative">
+                        <label for="infants" class="leading-7 text-sm text-gray-600">Infants (0-2years) if doesn't have set it to "0"</label>
+                        <input type="number" id="infants" name="infants" required="required"
+                            class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-pink-500 focus:bg-white focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                </div>
+                <div class="p-2 w-1/2">
+                    <div class="relative">
+                        <label for="duration" class="leading-7 text-sm text-gray-600">Duration of Tour ( NIGHTS )</label>
+                        <input type="number" id="duration" name="duration" required="required"
+                            class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-pink-500 focus:bg-white focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                </div>
+                <div class="p-2 w-1/2">
+                    <div class="relative">
+                    <label for="vehicle" class="leading-7 text-sm text-gray-600" >Vehicle:</label>
+                    <select name="vehicle" id="vehicle" required="required" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-pink-500 focus:bg-white focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" >
+                        <option value="honda brv">HONDA BRV (5-7) pas</option>
+                        <option value="toyota corola car">TOYOTA COROLLA CAR (2-4) pas</option>
+                        <option value="grand cabin">GRAND CABIN (8-10) pas</option>
+                        <option value="coaster">COASTER (14-27) pas</option>
+                    </select>
+                    </div>
+                    </div>
+
+                <div class="p-2 w-full">
+                    <div class="relative">
+                        <label for="message" class="leading-7 text-sm text-gray-600">Share your Itinerary</label>
+                        <textarea id="message" name="message"
+                            class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-pink-500 focus:bg-white focus:ring-2 focus:ring-pink-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                    </div>
+                </div>
+                <div class="p-2 w-full">
+                    <div class="relative">
+                        <label for="info" class="leading-7 text-sm text-gray-600">Further information</label>
+                        <textarea id="info" name="info"
+                            class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-pink-500 focus:bg-white focus:ring-2 focus:ring-pink-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                    </div>
+                </div>
+                <div class="p-2 w-1/2">
+                    <div class="relative">
+                        <input type="checkbox" id="accept" name="accept" required="required"
+                            class=" bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-pink-500 focus:bg-white focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                        <label for="accept" class="leading-7 text-sm text-gray-600">I agree with processing my personal information.</label>
+                    </div>
+                <div class="p-2 w-full">
+                    <button
+                        class="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">Submit</button>
+
+            </div>
+        </div>
+    </form>
+        </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{
+    "params":
+    {
+        "local_server":"True",
+        "local_uri":"mysql://root:@localhost/triexplorers",
+        "prod_uri":"mysql://root:@localhost/triexplorers",
+        "gmail-user":"booking.triexplorers@gmail.com",
+        "gmail-password": "emprloyuahhfnmtj",
+        "admin_user": "triexplorers",
+        "admin_password": "$$$@tri001",
+        "upload_location": "\\static\\images"
+        
+    } 
+}
